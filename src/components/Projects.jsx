@@ -23,19 +23,19 @@ const Projects = () => {
             description: "A comprehensive dashboard for managing products, orders, and analytics. Built with React and Recharts.",
             tags: ["React", "Node.js", "MongoDB", "Data Viz"],
             links: { demo: "#", code: "#" }
-        },
-        {
-            title: "Financial Tracker",
-            description: "Personal finance application to track income, expenses, and savings goals with visual reports.",
-            tags: ["JavaScript", "Firebase", "Chart.js"],
-            links: { demo: "#", code: "#" }
-        },
-        {
-            title: "AI Study Assistant",
-            description: "An intelligent study planner that adapts to your learning pace and schedule using basic ML algorithms.",
-            tags: ["Python", "Flask", "React", "OpenAI API"],
-            links: { demo: "#", code: "#" }
         }
+        // {
+        //     title: "Financial Tracker",
+        //     description: "Personal finance application to track income, expenses, and savings goals with visual reports.",
+        //     tags: ["JavaScript", "Firebase", "Chart.js"],
+        //     links: { demo: "#", code: "#" }
+        // },
+        // {
+        //     title: "AI Study Assistant",
+        //     description: "An intelligent study planner that adapts to your learning pace and schedule using basic ML algorithms.",
+        //     tags: ["Python", "Flask", "React", "OpenAI API"],
+        //     links: { demo: "#", code: "#" }
+        // }
     ];
 
     return (

@@ -4,6 +4,7 @@ import { FaBars, FaTimes } from 'react-icons/fa';
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const [activeSection, setActiveSection] = useState('');
 
     useEffect(() => {
         const handleScroll = () => {
@@ -14,8 +15,23 @@ const Navbar = () => {
             }
         };
 
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    setActiveSection(entry.target.id);
+                }
+            });
+        }, { threshold: 0.5 }); // Trigger when 50% visible
+
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => observer.observe(section));
+
         window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            sections.forEach(section => observer.unobserve(section));
+        };
     }, []);
 
     const toggleMenu = () => setIsOpen(!isOpen);
@@ -51,9 +67,26 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            style={{ fontWeight: 500 }}
+                            style={{
+                                fontWeight: 500,
+                                color: activeSection === link.href.substring(1) ? 'var(--accent-primary)' : 'inherit',
+                                position: 'relative',
+                                display: 'flex',
+                                flexDirection: 'column',
+                                alignItems: 'center'
+                            }}
                         >
                             {link.name}
+                            {activeSection === link.href.substring(1) && (
+                                <span style={{
+                                    position: 'absolute',
+                                    bottom: '-5px',
+                                    width: '6px',
+                                    height: '6px',
+                                    backgroundColor: 'var(--accent-primary)',
+                                    borderRadius: '50%'
+                                }} />
+                            )}
                         </a>
                     ))}
                     <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1rem' }}>Hire Me</a>
@@ -85,7 +118,11 @@ const Navbar = () => {
                             key={link.name}
                             href={link.href}
                             onClick={() => setIsOpen(false)}
-                            style={{ fontSize: '1.1rem', textAlign: 'center' }}
+                            style={{
+                                fontSize: '1.1rem',
+                                textAlign: 'center',
+                                color: activeSection === link.href.substring(1) ? 'var(--accent-primary)' : 'inherit'
+                            }}
                         >
                             {link.name}
                         </a>

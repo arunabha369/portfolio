@@ -111,10 +111,10 @@ const Projects = () => {
                                 </div>
 
                                 <div style={{ display: 'flex', gap: '1rem' }}>
-                                    <a href={project.links.code} className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                    <a href={project.links.code} target="_blank" rel="noopener noreferrer" className="btn btn-outline" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
                                         <FaGithub /> Code
                                     </a>
-                                    <a href={project.links.demo} className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
+                                    <a href={project.links.demo} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', padding: '0.5rem 1rem', fontSize: '0.9rem' }}>
                                         <FaExternalLinkAlt /> Live Demo
                                     </a>
                                 </div>

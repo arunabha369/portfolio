@@ -111,9 +111,13 @@ const About = () => {
                                 <h4 style={{ fontSize: '2rem', color: 'var(--accent-primary)', fontWeight: 'bold' }}>10+</h4>
                                 <p style={{ color: 'var(--text-secondary)' }}>Projects</p>
                             </div>
+                            <div>
+                                <h4 style={{ fontSize: '2rem', color: 'var(--accent-primary)', fontWeight: 'bold' }}>8.3</h4>
+                                <p style={{ color: 'var(--text-secondary)' }}>CGPA</p>
+                            </div>
                         </div>
 
-                        <a href="/src/assets/cv.pdf" download className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+                        <a href="/src/assets/cv.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
                             Download CV <FaDownload />
                         </a>
                     </div>

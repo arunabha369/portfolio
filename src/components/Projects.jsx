@@ -2,6 +2,7 @@
 import React from 'react';
 import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import hrSphereImg from '../assets/hrsphere.png';
+import pujaParikramaImg from '../assets/puja_parikrama.jpg';
 
 const Projects = () => {
     const projects = [
@@ -16,6 +17,7 @@ const Projects = () => {
             title: "Puja Parikrama Planner",
             description: "A guide for pandal hopping during Durga Puja, featuring maps and routes.",
             tags: ["React", "Maps", "Event"],
+            image: pujaParikramaImg,
             links: { demo: "https://pujaparikrama.online", code: "https://github.com/arunabha369/puja-parikrama" }
         },
         {

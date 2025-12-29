@@ -1,62 +1,149 @@
-# Arunabha Banerjee - Portfolio
+# 🚀 Arunabha Banerjee – Developer Portfolio
 
-A modern, responsive portfolio website built with **React** and **Vite**. This project showcases my skills, projects, and background as a Computer Science & Business Systems (CSBS) student.
+A modern, responsive **developer portfolio website** built using **React, Tailwind CSS, and Vite**, showcasing my projects, skills, and experience.  
+Designed with performance, clean UI, and best practices in mind.
 
-## 🚀 Features
+🌐 **Live Website:** https://arunabha.dev  
+📂 **Repository:** https://github.com/arunabha369/portfolio  
+🚀 **Deployed on:** Vercel
 
-- **Modern UI/UX**: Dark mode aesthetic with neon purple accents and "eye-soothing" typography.
-- **Interactive Elements**:
-  - Smooth scrolling navigation with active link highlighting.
-  - Custom cursor-following effects and ambient background animations.
-  - Hover effects on project cards and profile images.
-- **Responsive Design**: Fully optimized for desktop, tablet, and mobile devices.
-- **Functional Contact Form**: Directly opens your default email client with pre-filled details.
-- **Performance**: Optimized with Vite for lightning-fast load times.
+---
+
+## 👨‍💻 About Me
+
+Hi, I’m **Arunabha Banerjee**, a passionate **Frontend / React Developer** who enjoys building fast, responsive, and user-friendly web applications.
+
+I focus on:
+- Clean and maintainable code
+- Modern UI/UX
+- Performance optimization
+- Real-world problem solving using JavaScript & React
+
+This portfolio reflects my skills, learning journey, and projects.
+
+---
+
+## ✨ Features
+
+- ⚡ **Fast performance** (Vite-powered build)
+- 📱 **Fully responsive** (mobile-first design)
+- 🎨 **Modern UI** using Tailwind CSS
+- 🧩 **Reusable React components**
+- 🔒 **HTTPS secured** with SSL (`.dev` domain)
+- 🌐 **SEO-ready** (robots.txt & sitemap.xml)
+- 🚀 Continuous deployment with Vercel
+
+---
 
 ## 🛠️ Tech Stack
 
-- **Frontend**: React.js
-- **Build Tool**: Vite
-- **Styling**: Vanilla CSS (Variables, Grid, Flexbox)
-- **Icons**: React Icons (FontAwesome)
+- **Frontend:** React.js, JavaScript (ES6+)
+- **Styling:** Tailwind CSS
+- **Build Tool:** Vite
+- **Deployment:** Vercel
+- **Version Control:** Git & GitHub
 
-## 📂 Project Structure
+---
+
+## 📁 Project Structure
+
+```bash
+portfolio/
+├── public/
+│   ├── robots.txt
+│   ├── sitemap.xml
+│   └── index.html
+├── src/
+│   ├── assets/        # Images, icons, resume
+│   ├── components/    # Reusable UI components
+│   ├── App.jsx        # Main app layout
+│   ├── main.jsx       # React entry point
+│   └── index.css      # Global styles
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+└── README.md
+````
+
+---
+
+## 🚀 Getting Started (Run Locally)
+
+### 1️⃣ Clone the repository
+
+```bash
+git clone https://github.com/arunabha369/portfolio.git
+```
+
+### 2️⃣ Navigate to the project folder
+
+```bash
+cd portfolio
+```
+
+### 3️⃣ Install dependencies
+
+```bash
+npm install
+```
+
+### 4️⃣ Start the development server
+
+```bash
+npm run dev
+```
+
+The app will run at:
 
 ```
-src/
-├── assets/          # Images (profile, project screenshots) and CV
-├── components/      # Reusable UI components (Navbar, Hero, About, etc.)
-├── App.jsx          # Main application layout
-├── main.jsx         # Entry point
-└── index.css        # Global styles and variables
+http://localhost:5173
 ```
 
-## 🔧 Installation & Run
+---
 
-1. **Clone the repository**:
-   ```bash
-   git clone https://github.com/arunabha369/portfolio.git
-   cd portfolio
-   ```
+## 📦 Build for Production
 
-2. **Install dependencies**:
-   ```bash
-   npm install
-   ```
+```bash
+npm run build
+```
 
-3. **Start the development server**:
-   ```bash
-   npm run dev
-   ```
+---
 
-4. **Build for production**:
-   ```bash
-   npm run build
-   ```
+## 🌍 Deployment
+
+This project is deployed on **Vercel** with:
+
+* Custom domain: `arunabha.dev`
+* Automatic SSL certificate
+* Continuous deployment from GitHub
+
+Every push to the `main` branch triggers an automatic redeploy.
+
+---
+
+## 📈 Future Improvements
+
+Planned enhancements:
+
+* Dark mode support
+* Framer Motion animations
+* Blog / case study section
+* Migration to Next.js for advanced SEO
+* Performance and accessibility improvements
+
+---
+
+## 🤝 Contributing
+
+Suggestions and improvements are welcome.
+Feel free to fork this repository and submit a pull request.
+
+---
 
 ## 👤 Author
 
 **Arunabha Banerjee**
+- Portfolio: [https://arunabha.dev](https://arunabha.dev)
 - LinkedIn: [linkedin.com/in/arunabha369](https://www.linkedin.com/in/arunabha369/)
 - GitHub: [github.com/arunabha369](https://github.com/arunabha369)
 - Email: arunabhabanerjee5@gmail.com

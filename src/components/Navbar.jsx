@@ -81,10 +81,10 @@ const Navbar = () => {
                                 <span style={{
                                     position: 'absolute',
                                     bottom: '-5px',
-                                    width: '6px',
-                                    height: '6px',
+                                    width: '100%',
+                                    height: '2px',
                                     backgroundColor: 'var(--accent-primary)',
-                                    borderRadius: '50%'
+                                    borderRadius: '1px'
                                 }} />
                             )}
                         </a>

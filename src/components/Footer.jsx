@@ -10,8 +10,7 @@ const Footer = () => {
             fontSize: '0.9rem'
         }}>
             <div className="container">
-                <p>&copy; {new Date().getFullYear()} Portfolio. All rights reserved.</p>
-                <p style={{ marginTop: '0.5rem' }}>Built with React & Vite</p>
+                <p>Design & Developed by Arunabha Banerjee &copy; {new Date().getFullYear()}. All rights reserved.</p>
             </div>
         </footer>
     );

@@ -1,10 +1,17 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import { motion, useScroll, useSpring } from "framer-motion";
 
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('');
+    const { scrollYProgress } = useScroll();
+    const scaleX = useSpring(scrollYProgress, {
+        stiffness: 100,
+        damping: 30,
+        restDelta: 0.001
+    });
 
     useEffect(() => {
         const handleScroll = () => {
@@ -129,6 +136,21 @@ const Navbar = () => {
                     ))}
                 </div>
             )}
+
+            {/* Scroll Progress Bar */}
+            <motion.div
+                className="progress-bar"
+                style={{
+                    position: 'absolute',
+                    bottom: 0,
+                    left: 0,
+                    right: 0,
+                    height: '3px',
+                    backgroundColor: 'var(--accent-primary)', // Using backgroundColor instead of background to be safe
+                    transformOrigin: '0%',
+                    scaleX
+                }}
+            />
 
             <style>{`
         @media (min-width: 768px) {

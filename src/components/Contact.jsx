@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaEnvelope, FaLinkedin, FaGithub, FaTwitter, FaYoutube, FaInstagram } from 'react-icons/fa';
 
 const Contact = () => {
     const [formData, setFormData] = useState({
@@ -121,6 +121,16 @@ const Contact = () => {
                                     onMouseLeave={handleMouseLeave}
                                 >
                                     <FaYoutube />
+                                </a>
+                                <a
+                                    href="https://www.instagram.com/arunabha_369/"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    style={socialLinkStyle}
+                                    onMouseEnter={handleMouseEnter}
+                                    onMouseLeave={handleMouseLeave}
+                                >
+                                    <FaInstagram />
                                 </a>
                             </div>
                         </div>

@@ -1,30 +1,10 @@
 import React from 'react';
 import { FaArrowRight } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
+import { blogs } from '../data/blogs'; // Import from shared data
 
 const Blogs = () => {
-    const blogs = [
-        {
-            id: 1,
-            title: "Getting Started with React and Vite",
-            summary: "A comprehensive guide to setting up a blazing fast React development environment using Vite.",
-            date: "Dec 28, 2024",
-            link: "#"
-        },
-        {
-            id: 2,
-            title: "Mastering CSS Grid and Flexbox",
-            summary: "Learn how to build complex layouts with ease using modern CSS techniques.",
-            date: "Dec 15, 2024",
-            link: "#"
-        },
-        {
-            id: 3,
-            title: "The Future of Web Development with AI",
-            summary: "Exploring how Artificial Intelligence is transforming the way we build and interact with the web.",
-            date: "Nov 30, 2024",
-            link: "#"
-        }
-    ];
+    // blogs data is now imported
 
     return (
         <section id="blogs" className="section">
@@ -64,7 +44,7 @@ const Blogs = () => {
                             <p style={{ color: 'var(--text-secondary)', flex: 1, lineHeight: 1.6 }}>
                                 {blog.summary}
                             </p>
-                            <a href={blog.link} style={{
+                            <Link to={`/blog/${blog.id}`} style={{
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '0.5rem',
@@ -73,7 +53,7 @@ const Blogs = () => {
                                 marginTop: '1rem'
                             }}>
                                 Read More <FaArrowRight />
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>

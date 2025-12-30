@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, useScroll, useSpring } from "framer-motion";
+import { useNavigate, useLocation } from 'react-router-dom';
 
 const navLinks = [
     { name: 'About', href: '#about' },
@@ -15,6 +16,9 @@ const Navbar = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [activeSection, setActiveSection] = useState('');
     const { scrollYProgress } = useScroll();
+    const navigate = useNavigate();
+    const location = useLocation();
+
     const scaleX = useSpring(scrollYProgress, {
         stiffness: 100,
         damping: 30,
@@ -80,6 +84,25 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const targetId = link.href.substring(1);
+                                if (location.pathname === '/') {
+                                    const element = document.getElementById(targetId);
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                } else {
+                                    // Navigate to home then scroll
+                                    navigate('/');
+                                    setTimeout(() => {
+                                        const element = document.getElementById(targetId);
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }, 100);
+                                }
+                            }}
                             style={{
                                 fontWeight: 500,
                                 color: activeSection === link.href.substring(1) ? 'var(--accent-primary)' : 'inherit',
@@ -130,7 +153,26 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            onClick={() => setIsOpen(false)}
+                            onClick={(e) => {
+                                e.preventDefault();
+                                const targetId = link.href.substring(1);
+                                if (location.pathname === '/') {
+                                    const element = document.getElementById(targetId);
+                                    if (element) {
+                                        element.scrollIntoView({ behavior: 'smooth' });
+                                    }
+                                } else {
+                                    // Navigate to home then scroll
+                                    navigate('/');
+                                    setTimeout(() => {
+                                        const element = document.getElementById(targetId);
+                                        if (element) {
+                                            element.scrollIntoView({ behavior: 'smooth' });
+                                        }
+                                    }, 100);
+                                }
+                                setIsOpen(false);
+                            }}
                             style={{
                                 fontSize: '1.1rem',
                                 textAlign: 'center',

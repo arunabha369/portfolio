@@ -23,7 +23,7 @@ const BlogDetail = () => {
     return (
         <div style={{ paddingTop: '100px', paddingBottom: '4rem', minHeight: '100vh', backgroundColor: 'var(--bg-primary)' }}>
             <div className="container" style={{ maxWidth: '800px' }}>
-                <Link to="/" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-primary)', marginBottom: '2rem', fontWeight: 500 }}>
+                <Link to="/#blogs" style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', color: 'var(--accent-primary)', marginBottom: '2rem', fontWeight: 500 }}>
                     <FaArrowLeft /> Back to Home
                 </Link>
 

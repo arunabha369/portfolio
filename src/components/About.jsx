@@ -117,8 +117,8 @@ const About = () => {
                             </div>
                         </div>
 
-                        <a href="/src/assets/cv.pdf" download target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
-                            Download CV <FaDownload />
+                        <a href="https://drive.google.com/file/d/1eapnXDyf9t8XSzUWsVoH0Ljvx_T5bv7M/view?usp=sharing" target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ display: 'inline-flex', alignItems: 'center', gap: '0.8rem' }}>
+                            Resume/CV <FaDownload />
                         </a>
                     </div>
                 </div>

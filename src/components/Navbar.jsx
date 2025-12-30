@@ -52,11 +52,22 @@ const Navbar = () => {
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
-            const sections = document.querySelectorAll('section');
-            sections.forEach(section => observer.unobserve(section));
             observer.disconnect();
         };
     }, []);
+
+    // Handle hash scrolling on route change
+    useEffect(() => {
+        if (location.pathname === '/' && location.hash) {
+            const targetId = location.hash.substring(1);
+            setTimeout(() => {
+                const element = document.getElementById(targetId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            }, 100);
+        }
+    }, [location]);
 
     const toggleMenu = () => setIsOpen(!isOpen);
 

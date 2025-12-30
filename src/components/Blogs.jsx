@@ -17,7 +17,7 @@ const Blogs = () => {
                     gap: '2rem'
                 }}>
                     {blogs.map((blog) => (
-                        <div key={blog.id} style={{
+                        <Link key={blog.id} to={`/blog/${blog.id}`} style={{
                             backgroundColor: 'var(--bg-card)',
                             borderRadius: '16px',
                             padding: '2rem',
@@ -26,7 +26,8 @@ const Blogs = () => {
                             flexDirection: 'column',
                             gap: '1rem',
                             transition: 'transform var(--transition-normal), border-color var(--transition-normal)',
-                            cursor: 'pointer'
+                            cursor: 'pointer',
+                            textDecoration: 'none'
                         }}
                             onMouseEnter={(e) => {
                                 e.currentTarget.style.transform = 'translateY(-5px)';
@@ -40,11 +41,11 @@ const Blogs = () => {
                             <span style={{ fontSize: '0.9rem', color: 'var(--accent-primary)', fontWeight: 500 }}>
                                 {blog.date}
                             </span>
-                            <h3 style={{ fontSize: '1.5rem', lineHeight: 1.3 }}>{blog.title}</h3>
+                            <h3 style={{ fontSize: '1.5rem', lineHeight: 1.3, color: 'var(--text-primary)' }}>{blog.title}</h3>
                             <p style={{ color: 'var(--text-secondary)', flex: 1, lineHeight: 1.6 }}>
                                 {blog.summary}
                             </p>
-                            <Link to={`/blog/${blog.id}`} style={{
+                            <span style={{
                                 display: 'flex',
                                 alignItems: 'center',
                                 gap: '0.5rem',
@@ -53,8 +54,8 @@ const Blogs = () => {
                                 marginTop: '1rem'
                             }}>
                                 Read More <FaArrowRight />
-                            </Link>
-                        </div>
+                            </span>
+                        </Link>
                     ))}
                 </div>
             </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FaDownload } from 'react-icons/fa';
-import profileImg from '../assets/arunabha-profile.jpg';
+import profileImg from '../assets/profile-formal.jpg';
 
 const About = () => {
     return (

@@ -1,47 +1,39 @@
 # 🚀 Arunabha Banerjee – Developer Portfolio
 
-A modern, responsive **developer portfolio website** built using **React, Tailwind CSS, and Vite**, showcasing my projects, skills, and experience.  
-Designed with performance, clean UI, and best practices in mind.
+Welcome to my personal developer portfolio! This website showcases my projects, skills, and experience as a Frontend Developer. It is built with modern web technologies to ensure high performance, responsiveness, and a seamless user experience.
 
-🌐 **Live Website:** https://arunabha.dev  
-📂 **Repository:** https://github.com/arunabha369/portfolio  
-🚀 **Deployed on:** Vercel
-
----
-
-## 👨‍💻 About Me
-
-Hi, I’m **Arunabha Banerjee**, a passionate **Frontend / React Developer** who enjoys building fast, responsive, and user-friendly web applications.
-
-I focus on:
-- Clean and maintainable code
-- Modern UI/UX
-- Performance optimization
-- Real-world problem solving using JavaScript & React
-
-This portfolio reflects my skills, learning journey, and projects.
+🌐 **Live Website:** [arunabha.dev](https://arunabha.dev)  
+📂 **Repository:** [github.com/arunabha369/portfolio](https://github.com/arunabha369/portfolio)
 
 ---
 
 ## ✨ Features
 
-- ⚡ **Fast performance** (Vite-powered build)
-- 📱 **Fully responsive** (mobile-first design)
-- 🎨 **Modern UI** using Tailwind CSS
-- 🧩 **Reusable React components**
-- 🔒 **HTTPS secured** with SSL (`.dev` domain)
-- 🌐 **SEO-ready** (robots.txt & sitemap.xml)
-- 🚀 Continuous deployment with Vercel
+- **🎨 Modern & Responsive Design**: Crafted with [Tailwind CSS](https://tailwindcss.com/) for a sleek, mobile-first look that adapts to all screen sizes.
+- **⚡ High Performance**: Powered by [Vite](https://vitejs.dev/) for lightning-fast development and optimized production builds.
+- **🎬 Smooth Animations**: Utilizing [Framer Motion](https://www.framer.com/motion/) for engaging page transitions and element animations.
+- **🧭 Dynamic Routing**: Implemented with [React Router](https://reactrouter.com/) for seamless navigation between pages (e.g., Blog Details).
+- **� Blog Section**: A dynamic blog section to share technical insights and updates.
+- **📱 Contact & Socials**: Integrated links to LinkedIn, GitHub, and email for easy connectivity.
+- **🔍 SEO Optimized**: Includes `sitemap.xml` and `robots.txt` for better search engine visibility.
 
 ---
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** React.js, JavaScript (ES6+)
-- **Styling:** Tailwind CSS
-- **Build Tool:** Vite
-- **Deployment:** Vercel
-- **Version Control:** Git & GitHub
+### **Core**
+- **[React.js](https://react.dev/)**: JavaScript library for building user interfaces.
+- **[JavaScript (ES6+)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)**: The language of the web.
+
+### **Styling**
+- **[Tailwind CSS](https://tailwindcss.com/)**: A utility-first CSS framework for rapid UI development.
+- **[React Icons](https://react-icons.github.io/react-icons/)**: Popular icon packs included easily.
+
+### **Libraries & Tools**
+- **[Framer Motion](https://www.framer.com/motion/)**: Production-ready motion library for React.
+- **[React Router DOM](https://reactrouter.com/)**: Declarative routing for React web applications.
+- **[Vite](https://vitejs.dev/)**: Next-generation frontend tooling.
+- **[ESLint](https://eslint.org/)**: Pluggable JavaScript linter.
 
 ---
 
@@ -49,101 +41,91 @@ This portfolio reflects my skills, learning journey, and projects.
 
 ```bash
 portfolio/
-├── public/
-│   ├── robots.txt
+├── public/              # Static assets (favicon, robots.txt, etc.)
+│   ├── favicon.png
 │   ├── sitemap.xml
-│   └── index.html
+│   └── robots.txt
 ├── src/
-│   ├── assets/        # Images, icons, resume
-│   ├── components/    # Reusable UI components
-│   ├── App.jsx        # Main app layout
-│   ├── main.jsx       # React entry point
-│   └── index.css      # Global styles
-├── tailwind.config.js
-├── vite.config.js
-├── package.json
-└── README.md
-````
-
----
-
-## 🚀 Getting Started (Run Locally)
-
-### 1️⃣ Clone the repository
-
-```bash
-git clone https://github.com/arunabha369/portfolio.git
-```
-
-### 2️⃣ Navigate to the project folder
-
-```bash
-cd portfolio
-```
-
-### 3️⃣ Install dependencies
-
-```bash
-npm install
-```
-
-### 4️⃣ Start the development server
-
-```bash
-npm run dev
-```
-
-The app will run at:
-
-```
-http://localhost:5173
+│   ├── assets/          # Images, logos, and other static files
+│   ├── components/      # Reusable UI components (Header, Footer, Hero, etc.)
+│   ├── data/            # Static data files (e.g., blog posts, projects)
+│   ├── pages/           # Page components (e.g., BlogDetail)
+│   ├── App.jsx          # Main application component
+│   ├── main.jsx         # Entry point of the application
+│   └── index.css        # Global styles (Tailwind directives)
+├── .gitignore           # Git ignore rules
+├── package.json         # Project dependencies and scripts
+├── postcss.config.js    # PostCSS configuration
+├── tailwind.config.js   # Tailwind CSS configuration
+├── vite.config.js       # Vite configuration
+└── README.md            # Project documentation
 ```
 
 ---
 
-## 📦 Build for Production
+## 🚀 Getting Started
 
-```bash
-npm run build
-```
+Follow these steps to set up the project locally on your machine.
+
+### Prerequisites
+Make sure you have **Node.js** (v18+ recommended) and **npm** installed.
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/arunabha369/portfolio.git
+    cd portfolio
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+    The application will be available at `http://localhost:5173`.
+
+---
+
+## � Scripts
+
+| Script | Description |
+| :--- | :--- |
+| `npm run dev` | Starts the development server with HMR (Hot Module Replacement). |
+| `npm run build` | Builds the application for production to the `dist` folder. |
+| `npm run preview` | Locally previews the production build. |
+| `npm run lint` | Runs ESLint to identify and report code patterns. |
 
 ---
 
 ## 🌍 Deployment
 
-This project is deployed on **Vercel** with:
+The project is optimized for deployment on platforms like **Vercel**, **Netlify**, or **GitHub Pages**.
 
-* Custom domain: `arunabha.dev`
-* Automatic SSL certificate
-* Continuous deployment from GitHub
-
-Every push to the `main` branch triggers an automatic redeploy.
-
----
-
-## 📈 Future Improvements
-
-Planned enhancements:
-
-* Dark mode support
-* Framer Motion animations
-* Blog / case study section
-* Migration to Next.js for advanced SEO
-* Performance and accessibility improvements
-
----
-
-## 🤝 Contributing
-
-Suggestions and improvements are welcome.
-Feel free to fork this repository and submit a pull request.
+**Vercel Deployment:**
+1.  Connect your GitHub repository to Vercel.
+2.  Vite settings are automatically detected.
+3.  Deploy! 🚀
 
 ---
 
 ## 👤 Author
 
 **Arunabha Banerjee**
-- Portfolio: [https://arunabha.dev](https://arunabha.dev)
-- LinkedIn: [linkedin.com/in/arunabha369](https://www.linkedin.com/in/arunabha369/)
-- GitHub: [github.com/arunabha369](https://github.com/arunabha369)
-- Email: arunabhabanerjee5@gmail.com
+
+- **Portfolio**: [arunabha.dev](https://arunabha.dev)
+- **LinkedIn**: [linkedin.com/in/arunabha369](https://www.linkedin.com/in/arunabha369/)
+- **GitHub**: [github.com/arunabha369](https://github.com/arunabha369)
+- **Email**: arunabhabanerjee5@gmail.com
+
+---
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
+
+&copy; 2025 Arunabha Banerjee. All rights reserved.

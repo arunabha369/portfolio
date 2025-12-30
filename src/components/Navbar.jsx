@@ -2,6 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { motion, useScroll, useSpring } from "framer-motion";
 
+const navLinks = [
+    { name: 'About', href: '#about' },
+    { name: 'Skills', href: '#skills' },
+    { name: 'Projects', href: '#projects' },
+    { name: 'Blogs', href: '#blogs' },
+    { name: 'Contact', href: '#contact' },
+];
+
 const Navbar = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
@@ -28,27 +36,25 @@ const Navbar = () => {
                     setActiveSection(entry.target.id);
                 }
             });
-        }, { threshold: 0.5 }); // Trigger when 50% visible
+        }, { rootMargin: '-70px 0px -60% 0px' });
 
-        const sections = document.querySelectorAll('section');
-        sections.forEach(section => observer.observe(section));
+        // Use a small timeout to ensure DOM is fully ready, especially for dynamically added sections during dev HMR
+        setTimeout(() => {
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => observer.observe(section));
+        }, 100);
 
         window.addEventListener('scroll', handleScroll);
 
         return () => {
             window.removeEventListener('scroll', handleScroll);
+            const sections = document.querySelectorAll('section');
             sections.forEach(section => observer.unobserve(section));
+            observer.disconnect();
         };
     }, []);
 
     const toggleMenu = () => setIsOpen(!isOpen);
-
-    const navLinks = [
-        { name: 'About', href: '#about' },
-        { name: 'Skills', href: '#skills' },
-        { name: 'Projects', href: '#projects' },
-        { name: 'Contact', href: '#contact' },
-    ];
 
     return (
         <nav style={{

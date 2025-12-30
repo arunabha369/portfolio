@@ -105,15 +105,15 @@ const About = () => {
                         <div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem' }}>
                             <div>
                                 <h4 style={{ fontSize: '2rem', color: 'var(--accent-primary)', fontWeight: 'bold' }}>3+</h4>
-                                <p style={{ color: 'var(--text-secondary)' }}>Years Coding</p>
-                            </div>
-                            <div>
-                                <h4 style={{ fontSize: '2rem', color: 'var(--accent-primary)', fontWeight: 'bold' }}>10+</h4>
                                 <p style={{ color: 'var(--text-secondary)' }}>Projects</p>
                             </div>
                             <div>
                                 <h4 style={{ fontSize: '2rem', color: 'var(--accent-primary)', fontWeight: 'bold' }}>8.3</h4>
                                 <p style={{ color: 'var(--text-secondary)' }}>CGPA</p>
+                            </div>
+                            <div>
+                                <h4 style={{ fontSize: '2rem', color: 'var(--accent-primary)', fontWeight: 'bold' }}>3+</h4>
+                                <p style={{ color: 'var(--text-secondary)' }}>Years Coding</p>
                             </div>
                         </div>
 

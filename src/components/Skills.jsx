@@ -16,7 +16,7 @@ const Skills = () => {
         {
             title: "Tools & DevOps",
             icon: <FaTools />,
-            skills: ["Git & GitHub", "VS Code", "Docker", "Postman", "Vite"]
+            skills: ["Git & GitHub", "VS Code", "Postman", "Vite"]
         },
         {
             title: "Business & Soft Skills",

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaTasks, FaMapMarkedAlt, FaCalendarAlt, FaLayerGroup, FaLock } from 'react-icons/fa';
-import { SiNetlify, SiTailwindcss, SiExpress, SiMongodb, SiSocketdotio, SiFramermotion, SiJsonwebtokens } from 'react-icons/si';
+import { SiNetlify, SiTailwindcss, SiExpress, SiMongodb, SiSocketdotio, SiFramer, SiJsonwebtokens } from 'react-icons/si';
 import hrSphereImg from '../assets/hrsphere.png';
 import pujaParikramaImg from '../assets/puja_parikrama.jpg';
 import codemateImg from '../assets/codemate.png';
@@ -84,7 +84,7 @@ const Projects = () => {
         "MongoDB": SiMongodb,
         "Socket.io": SiSocketdotio,
         "JWT Auth": SiJsonwebtokens, // Using custom if available, else lock
-        "Framer Motion": SiFramermotion
+        "Framer Motion": SiFramer
     };
 
     // Fallback icon if not found
@@ -159,7 +159,7 @@ const Projects = () => {
                         >
                             {/* Project Image */}
                             <div style={{
-                                height: '200px',
+                                height: '160px',
                                 backgroundColor: '#2a2a2a',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -174,11 +174,11 @@ const Projects = () => {
                                 )}
                             </div>
 
-                            <div style={{ padding: '2rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
-                                <h3 style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>{project.title}</h3>
+                            <div style={{ padding: '1.5rem', flex: 1, display: 'flex', flexDirection: 'column' }}>
+                                <h3 style={{ marginBottom: '0.5rem', fontSize: '1.25rem' }}>{project.title}</h3>
                                 <p style={{
                                     color: 'var(--text-secondary)',
-                                    marginBottom: '1.5rem',
+                                    marginBottom: '1rem',
                                     flex: 1,
                                     lineHeight: '1.6'
                                 }}>
@@ -186,19 +186,19 @@ const Projects = () => {
                                 </p>
 
                                 <div style={{
-                                    marginBottom: '2rem'
+                                    marginBottom: '1.5rem'
                                 }}>
                                     <h4 style={{
                                         color: '#fff',
-                                        fontSize: '1.1rem',
-                                        marginBottom: '0.8rem',
+                                        fontSize: '1rem',
+                                        marginBottom: '0.5rem',
                                         fontWeight: '600'
                                     }}>Tech Used</h4>
                                     <div style={{
                                         width: '100%',
                                         height: '1px',
                                         backgroundColor: '#333',
-                                        marginBottom: '1rem'
+                                        marginBottom: '0.8rem'
                                     }}></div>
                                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
                                         {project.tags.map((tag, idx) => (

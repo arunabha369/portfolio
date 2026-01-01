@@ -1,3 +1,4 @@
+// Updated imports for react-icons
 import React, { useState } from 'react';
 import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaTasks, FaMapMarkedAlt, FaCalendarAlt, FaLayerGroup, FaLock } from 'react-icons/fa';
 import { SiNetlify, SiTailwindcss, SiExpress, SiMongodb, SiSocketdotio, SiFramer, SiJsonwebtokens } from 'react-icons/si';

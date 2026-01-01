@@ -1,10 +1,95 @@
-
-import React from 'react';
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import React, { useState } from 'react';
+import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaTasks, FaMapMarkedAlt, FaCalendarAlt, FaLayerGroup, FaLock } from 'react-icons/fa';
+import { SiNetlify, SiTailwindcss, SiExpress, SiMongodb, SiSocketdotio, SiFramermotion, SiJsonwebtokens } from 'react-icons/si';
 import hrSphereImg from '../assets/hrsphere.png';
 import pujaParikramaImg from '../assets/puja_parikrama.jpg';
+import codemateImg from '../assets/codemate.png';
+
+const TechIconWithTooltip = ({ icon: Icon, label }) => {
+    const [showTooltip, setShowTooltip] = useState(false);
+
+    return (
+        <div
+            style={{ position: 'relative', display: 'flex', alignItems: 'center' }}
+            onMouseEnter={() => setShowTooltip(true)}
+            onMouseLeave={() => setShowTooltip(false)}
+        >
+            <div style={{
+                padding: '0.5rem',
+                backgroundColor: 'rgba(255, 255, 255, 0.05)',
+                borderRadius: '50%',
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+                color: 'var(--text-secondary)',
+                transition: 'all 0.3s ease',
+                cursor: 'pointer'
+            }}
+                onMouseOver={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(100, 108, 255, 0.1)';
+                    e.currentTarget.style.color = 'var(--accent-primary)';
+                    e.currentTarget.style.transform = 'translateY(-2px)';
+                }}
+                onMouseOut={(e) => {
+                    e.currentTarget.style.backgroundColor = 'rgba(255, 255, 255, 0.05)';
+                    e.currentTarget.style.color = 'var(--text-secondary)';
+                    e.currentTarget.style.transform = 'translateY(0)';
+                }}
+            >
+                <Icon size={20} />
+            </div>
+            {showTooltip && (
+                <div style={{
+                    position: 'absolute',
+                    bottom: '120%',
+                    left: '50%',
+                    transform: 'translateX(-50%)',
+                    backgroundColor: '#222',
+                    color: '#fff',
+                    padding: '0.4rem 0.8rem',
+                    borderRadius: '4px',
+                    fontSize: '0.75rem',
+                    whiteSpace: 'nowrap',
+                    zIndex: 10,
+                    boxShadow: '0 4px 6px rgba(0,0,0,0.3)',
+                    border: '1px solid #333'
+                }}>
+                    {label}
+                    <div style={{
+                        position: 'absolute',
+                        top: '100%',
+                        left: '50%',
+                        transform: 'translateX(-50%)',
+                        borderWidth: '5px',
+                        borderStyle: 'solid',
+                        borderColor: '#222 transparent transparent transparent'
+                    }}></div>
+                </div>
+            )}
+        </div>
+    );
+};
 
 const Projects = () => {
+    const techIcons = {
+        "React": FaReact,
+        "Netlify": SiNetlify,
+        "Management": FaTasks,
+        "Maps": FaMapMarkedAlt,
+        "Event": FaCalendarAlt,
+        "Tailwind CSS": SiTailwindcss,
+        "shadcn/ui": FaLayerGroup, // Using a generic layer group icon for shadcn/ui as it might not be in the set
+        "Node.js": FaNodeJs,
+        "Express": SiExpress,
+        "MongoDB": SiMongodb,
+        "Socket.io": SiSocketdotio,
+        "JWT Auth": SiJsonwebtokens, // Using custom if available, else lock
+        "Framer Motion": SiFramermotion
+    };
+
+    // Fallback icon if not found
+    const getIcon = (tag) => techIcons[tag] || FaLayerGroup;
+
     const projects = [
         {
             title: "HRSphere",
@@ -21,23 +106,25 @@ const Projects = () => {
             links: { demo: "https://pujaparikrama.online", code: "https://github.com/arunabha369/puja-parikrama" }
         },
         {
-            title: "E-Commerce Dashboard",
-            description: "A comprehensive dashboard for managing products, orders, and analytics. Built with React and Recharts.",
-            tags: ["React", "Node.js", "MongoDB", "Data Viz"],
-            links: { demo: "#", code: "#" }
+            title: "CodeMate",
+            description: "A MERN-based developer matchmaking platform that helps programmers discover collaborators through swipe-based matching, real-time chat, and smart developer feeds — Tinder for developers.",
+            tags: [
+                "React",
+                "Tailwind CSS",
+                "shadcn/ui",
+                "Node.js",
+                "Express",
+                "MongoDB",
+                "Socket.io",
+                "JWT Auth",
+                "Framer Motion"
+            ],
+            image: codemateImg,
+            links: {
+                demo: "#",
+                code: "https://github.com/arunabha369/CodeMate"
+            }
         }
-        // {
-        //     title: "Financial Tracker",
-        //     description: "Personal finance application to track income, expenses, and savings goals with visual reports.",
-        //     tags: ["JavaScript", "Firebase", "Chart.js"],
-        //     links: { demo: "#", code: "#" }
-        // },
-        // {
-        //     title: "AI Study Assistant",
-        //     description: "An intelligent study planner that adapts to your learning pace and schedule using basic ML algorithms.",
-        //     tags: ["Python", "Flask", "React", "OpenAI API"],
-        //     links: { demo: "#", code: "#" }
-        // }
     ];
 
     return (
@@ -98,18 +185,30 @@ const Projects = () => {
                                     {project.description}
                                 </p>
 
-                                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
-                                    {project.tags.map((tag, idx) => (
-                                        <span key={idx} style={{
-                                            fontSize: '0.85rem',
-                                            padding: '0.3rem 0.8rem',
-                                            backgroundColor: 'rgba(100, 108, 255, 0.1)',
-                                            color: 'var(--accent-primary)',
-                                            borderRadius: '20px'
-                                        }}>
-                                            {tag}
-                                        </span>
-                                    ))}
+                                <div style={{
+                                    marginBottom: '2rem'
+                                }}>
+                                    <h4 style={{
+                                        color: '#fff',
+                                        fontSize: '1.1rem',
+                                        marginBottom: '0.8rem',
+                                        fontWeight: '600'
+                                    }}>Tech Used</h4>
+                                    <div style={{
+                                        width: '100%',
+                                        height: '1px',
+                                        backgroundColor: '#333',
+                                        marginBottom: '1rem'
+                                    }}></div>
+                                    <div style={{ display: 'flex', flexWrap: 'wrap', gap: '0.8rem' }}>
+                                        {project.tags.map((tag, idx) => (
+                                            <TechIconWithTooltip
+                                                key={idx}
+                                                icon={getIcon(tag)}
+                                                label={tag}
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
 
                                 <div style={{ display: 'flex', gap: '1rem' }}>

@@ -128,7 +128,7 @@ const Projects = () => {
     ];
 
     return (
-        <section id="projects" className="section" style={{ backgroundColor: 'var(--bg-secondary)' }}>
+        <section id="projects" className="section" style={{ backgroundColor: 'var(--bg-secondary)', paddingTop: '0' }}>
             <div className="container">
                 <h2 className="section-title">Featured Projects</h2>
 
@@ -159,7 +159,7 @@ const Projects = () => {
                         >
                             {/* Project Image */}
                             <div style={{
-                                height: '160px',
+                                height: '200px',
                                 backgroundColor: '#2a2a2a',
                                 display: 'flex',
                                 alignItems: 'center',
@@ -180,7 +180,8 @@ const Projects = () => {
                                     color: 'var(--text-secondary)',
                                     marginBottom: '1rem',
                                     flex: 1,
-                                    lineHeight: '1.6'
+                                    lineHeight: '1.6',
+                                    fontSize: '0.9rem'
                                 }}>
                                     {project.description}
                                 </p>

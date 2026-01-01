@@ -40,7 +40,7 @@ const Navbar = () => {
                     setActiveSection(entry.target.id);
                 }
             });
-        }, { rootMargin: '-70px 0px -60% 0px' });
+        }, { rootMargin: '-40% 0px -40% 0px' });
 
         // Use a small timeout to ensure DOM is fully ready, especially for dynamically added sections during dev HMR
         setTimeout(() => {

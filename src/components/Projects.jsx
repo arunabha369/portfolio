@@ -4,7 +4,7 @@ import { FaGithub, FaExternalLinkAlt, FaReact, FaNodeJs, FaTasks, FaMapMarkedAlt
 import { SiNetlify, SiTailwindcss, SiExpress, SiMongodb, SiSocketdotio, SiFramer, SiJsonwebtokens } from 'react-icons/si';
 import hrSphereImg from '../assets/hrsphere.png';
 import pujaParikramaImg from '../assets/puja_parikrama.jpg';
-import codemateImg from '../assets/codemate.png';
+import codemateImg from '../assets/CodeMate.png';
 
 const TechIconWithTooltip = ({ icon: Icon, label }) => {
     const [showTooltip, setShowTooltip] = useState(false);

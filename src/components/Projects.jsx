@@ -94,18 +94,26 @@ const Projects = () => {
     const projects = [
         {
             title: "HRSphere",
-            description: "A comprehensive HR management system for tracking employees, payroll, and performance.",
-            tags: ["React", "Netlify", "Management"],
+            description: "A scalable Human Resource Management System that streamlines core HR processes — from employee records and attendance to recruitment, payroll, and performance — built with a modern full-stack stack.",
+            tags: ["React", "Node.js", "MongoDB", "Express", "Vite", "Tailwind CSS"],
             image: hrSphereImg,
-            links: { demo: "https://hrsphere.netlify.app/", code: "https://github.com/arunabha369/HRSphere" }
+            links: {
+                demo: "https://hrsphere.netlify.app/",
+                code: "https://github.com/arunabha369/HRSphere"
+            }
         },
+
         {
             title: "Puja Parikrama Planner",
-            description: "A guide for pandal hopping during Durga Puja, featuring maps and routes.",
-            tags: ["React", "Maps", "Event"],
+            description: "An interactive web app to plan and optimize your Durga Puja pandal-hopping journey with smart routes, maps, and personalized itineraries.",
+            tags: ["JavaScript", "Leaflet.js", "Maps", "Netlify"],
             image: pujaParikramaImg,
-            links: { demo: "https://pujaparikrama.online", code: "https://github.com/arunabha369/puja-parikrama" }
+            links: {
+                demo: "https://pujaparikrama.online",
+                code: "https://github.com/arunabha369/puja-parikrama"
+            }
         },
+
         {
             title: "CodeMate",
             description: "A MERN-based developer matchmaking platform that helps programmers discover collaborators through swipe-based matching, real-time chat, and smart developer feeds — Tinder for developers.",

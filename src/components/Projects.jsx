@@ -98,7 +98,7 @@ const Projects = () => {
             tags: ["React", "Node.js", "MongoDB", "Express", "Vite", "Tailwind CSS"],
             image: hrSphereImg,
             links: {
-                demo: "https://hrsphere.netlify.app/",
+                demo: "https://hr-sphere-beta.vercel.app/",
                 code: "https://github.com/arunabha369/HRSphere"
             }
         },

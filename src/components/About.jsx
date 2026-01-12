@@ -101,6 +101,9 @@ const About = () => {
                             My goal is not just to write code, but to solve real-world business problems through
                             innovative technical solutions. I thrive in environments where technology meets strategy.
                         </p>
+                        <p style={{ color: 'var(--text-secondary)', marginBottom: '2rem', fontSize: '1.1rem' }}>
+                            I write things for machines—and they understand.
+                        </p>
 
                         <div style={{ display: 'flex', gap: '2rem', marginBottom: '2rem' }}>
                             <div>

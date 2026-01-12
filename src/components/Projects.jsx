@@ -130,7 +130,7 @@ const Projects = () => {
             ],
             image: codemateImg,
             links: {
-                demo: "#",
+                demo: "https://code-mate-gamma.vercel.app/",
                 code: "https://github.com/arunabha369/CodeMate"
             }
         }

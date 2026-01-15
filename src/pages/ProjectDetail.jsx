@@ -125,10 +125,10 @@ const ProjectDetail = () => {
                     </Link>
 
                     {/* 1. Title */}
-                    <h1 style={{ fontSize: '3.5rem', fontWeight: '800', margin: '0 0 1rem', color: '#fff', lineHeight: '1.1' }}>{project.title}</h1>
+                    <h1 style={{ fontSize: 'clamp(2.5rem, 8vw, 3.5rem)', fontWeight: '800', margin: '0 0 1rem', color: '#fff', lineHeight: '1.1' }}>{project.title}</h1>
 
                     {/* 2. Short Description */}
-                    <p style={{ fontSize: '1.25rem', color: '#ccc', lineHeight: '1.6', marginBottom: '2.5rem', maxWidth: '90%' }}>
+                    <p style={{ fontSize: 'clamp(1rem, 4vw, 1.25rem)', color: '#ccc', lineHeight: '1.6', marginBottom: '2.5rem', maxWidth: '90%' }}>
                         {project.description}
                     </p>
 

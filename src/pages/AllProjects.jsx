@@ -44,7 +44,7 @@ const AllProjects = () => {
                     <h1 className="section-title" style={{ textAlign: 'left', margin: 0 }}>All Projects</h1>
 
                     {/* Filter Buttons */}
-                    <div style={{ display: 'flex', gap: '1rem' }}>
+                    <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
                         <button
                             onClick={() => setFilter('all')}
                             style={filterBtnStyle(filter === 'all')}

@@ -181,6 +181,16 @@ const Navbar = () => {
                             {link.name}
                         </a>
                     ))}
+                    <div
+                        className="btn btn-primary"
+                        onClick={() => {
+                            navigate('/contact');
+                            setIsOpen(false);
+                        }}
+                        style={{ padding: '0.8rem 1rem', cursor: 'pointer', textAlign: 'center', margin: '0 2rem' }}
+                    >
+                        Hire Me
+                    </div>
                 </div>
             )}
 

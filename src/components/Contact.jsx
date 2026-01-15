@@ -52,8 +52,8 @@ const Contact = () => {
 
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))',
-                    gap: '4rem'
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', // Reduced min-width for mobile
+                    gap: '3rem' // Reduced gap slightly
                 }}>
                     {/* Contact Info */}
                     <div>

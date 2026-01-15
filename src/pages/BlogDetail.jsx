@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa';
 import { supabase } from '../lib/supabaseClient';
 import BlogCard from '../components/BlogCard';
-import LikeSection from '../components/LikeSection';
+import BlogInteractionBar from '../components/BlogInteractionBar';
 import CommentSection from '../components/CommentSection';
 
 const BlogDetail = () => {
@@ -104,14 +104,16 @@ const BlogDetail = () => {
                     </div>
                 )}
 
-                <div style={{ marginBottom: '2rem', display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
-                    <span style={{ color: 'var(--accent-primary)', fontWeight: 600 }}>{new Date(blog.created_at).toLocaleDateString()}</span>
+                <div style={{ marginBottom: '1rem', display: 'flex', alignItems: 'center', gap: '1rem', flexWrap: 'wrap' }}>
                     {blog.tags && blog.tags.map(tag => (
                         <span key={tag} style={{ fontSize: '0.85rem', padding: '0.2rem 0.6rem', backgroundColor: 'rgba(var(--accent-primary-rgb), 0.1)', borderRadius: '20px', color: 'var(--accent-primary)' }}>#{tag}</span>
                     ))}
                 </div>
 
-                <h1 style={{ fontSize: '2.5rem', marginBottom: '2rem', lineHeight: 1.2, color: 'var(--text-primary)' }}>{blog.title}</h1>
+                <h1 style={{ fontSize: '2.5rem', marginBottom: '1rem', lineHeight: 1.2, color: 'var(--text-primary)' }}>{blog.title}</h1>
+
+                {/* Interaction Bar */}
+                <BlogInteractionBar blog={blog} visitorId={localStorage.getItem('visitor_id')} />
 
                 <div style={{ lineHeight: 1.8, fontSize: '1.1rem', color: 'var(--text-secondary)' }}>
                     {/* Render Sections */}
@@ -153,8 +155,11 @@ const BlogDetail = () => {
                     ))}
                 </div>
 
-                {/* Like Section using blog ID */}
-                <LikeSection blogId={blog.id} />
+                {/* Bottom Interaction Bar */}
+                <div style={{ marginTop: '3rem', marginBottom: '1rem' }}>
+                    <p style={{ textAlign: 'center', color: '#666', marginBottom: '1rem', fontStyle: 'italic' }}>Enjoyed this post? Give it some love!</p>
+                    <BlogInteractionBar blog={blog} visitorId={localStorage.getItem('visitor_id')} />
+                </div>
 
                 {/* Comment Section using blog ID */}
                 <CommentSection blogId={blog.id} />

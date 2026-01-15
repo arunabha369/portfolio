@@ -4,11 +4,8 @@ import { motion, useScroll, useSpring } from "framer-motion";
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const navLinks = [
-    { name: 'About', href: '#about' },
-    { name: 'Skills', href: '#skills' },
-    { name: 'Projects', href: '#projects' },
-    { name: 'Blogs', href: '#blogs' },
-    { name: 'Contact', href: '#contact' },
+    { name: 'Blogs', href: '/blog' },
+    { name: 'Projects', href: '/projects' },
 ];
 
 const Navbar = () => {
@@ -71,6 +68,34 @@ const Navbar = () => {
 
     const toggleMenu = () => setIsOpen(!isOpen);
 
+    const handleNavClick = (e, link) => {
+        e.preventDefault();
+
+        if (link.href.startsWith('#')) {
+            const targetId = link.href.substring(1);
+            if (location.pathname === '/') {
+                const element = document.getElementById(targetId);
+                if (element) {
+                    element.scrollIntoView({ behavior: 'smooth' });
+                }
+            } else {
+                // Navigate to home then scroll
+                navigate('/');
+                setTimeout(() => {
+                    const element = document.getElementById(targetId);
+                    if (element) {
+                        element.scrollIntoView({ behavior: 'smooth' });
+                    }
+                }, 100);
+            }
+        } else {
+            // Standard navigation
+            navigate(link.href);
+            window.scrollTo(0, 0);
+        }
+        setIsOpen(false);
+    };
+
     return (
         <nav style={{
             position: 'fixed',
@@ -95,28 +120,10 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                const targetId = link.href.substring(1);
-                                if (location.pathname === '/') {
-                                    const element = document.getElementById(targetId);
-                                    if (element) {
-                                        element.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                } else {
-                                    // Navigate to home then scroll
-                                    navigate('/');
-                                    setTimeout(() => {
-                                        const element = document.getElementById(targetId);
-                                        if (element) {
-                                            element.scrollIntoView({ behavior: 'smooth' });
-                                        }
-                                    }, 100);
-                                }
-                            }}
+                            onClick={(e) => handleNavClick(e, link)}
                             style={{
                                 fontWeight: 500,
-                                color: activeSection === link.href.substring(1) ? 'var(--accent-primary)' : 'inherit',
+                                color: (activeSection === link.href.substring(1) && link.href.startsWith('#')) || location.pathname === link.href ? 'var(--accent-primary)' : 'inherit',
                                 position: 'relative',
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -124,7 +131,7 @@ const Navbar = () => {
                             }}
                         >
                             {link.name}
-                            {activeSection === link.href.substring(1) && (
+                            {((activeSection === link.href.substring(1) && link.href.startsWith('#')) || location.pathname === link.href) && (
                                 <span style={{
                                     position: 'absolute',
                                     bottom: '-5px',
@@ -164,30 +171,11 @@ const Navbar = () => {
                         <a
                             key={link.name}
                             href={link.href}
-                            onClick={(e) => {
-                                e.preventDefault();
-                                const targetId = link.href.substring(1);
-                                if (location.pathname === '/') {
-                                    const element = document.getElementById(targetId);
-                                    if (element) {
-                                        element.scrollIntoView({ behavior: 'smooth' });
-                                    }
-                                } else {
-                                    // Navigate to home then scroll
-                                    navigate('/');
-                                    setTimeout(() => {
-                                        const element = document.getElementById(targetId);
-                                        if (element) {
-                                            element.scrollIntoView({ behavior: 'smooth' });
-                                        }
-                                    }, 100);
-                                }
-                                setIsOpen(false);
-                            }}
+                            onClick={(e) => handleNavClick(e, link)}
                             style={{
                                 fontSize: '1.1rem',
                                 textAlign: 'center',
-                                color: activeSection === link.href.substring(1) ? 'var(--accent-primary)' : 'inherit'
+                                color: (activeSection === link.href.substring(1) && link.href.startsWith('#')) || location.pathname === link.href ? 'var(--accent-primary)' : 'inherit'
                             }}
                         >
                             {link.name}

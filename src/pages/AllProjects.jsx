@@ -12,12 +12,12 @@ const AllProjects = () => {
     }, []);
 
     // Calculate counts
-    const workingCount = projects.filter(p => p.status === "All Systems Operational").length;
+    const workingCount = projects.filter(p => p.status === "All Systems Operational" || p.status === "Completed").length;
     const buildingCount = projects.filter(p => p.status === "In Progress").length;
 
     // Filter projects
     const filteredProjects = projects.filter(p => {
-        if (filter === 'working') return p.status === "All Systems Operational";
+        if (filter === 'working') return p.status === "All Systems Operational" || p.status === "Completed";
         if (filter === 'building') return p.status === "In Progress";
         return true;
     });

@@ -10,6 +10,9 @@ export const projects = [
         fullDescription: "HRSphere is a comprehensive Human Resource Management System designed to modernize workforce management. It offers a centralized platform for handling employee data, tracking attendance with geolocation, automating payroll calculations, and streamlining the recruitment process. The system includes role-based access control, insightful analytics dashboards, and a responsive design ensures accessibility across devices.",
         tags: ["React", "Node.js", "MongoDB", "Express", "Vite", "Tailwind CSS"],
         status: "In Progress",
+        timeline: "3 Months",
+        role: "Full Stack",
+        team: "Solo",
         image: hrSphereImg,
         links: {
             demo: "https://hr-sphere-beta.vercel.app/",
@@ -23,6 +26,9 @@ export const projects = [
         fullDescription: "Puja Parikrama Planner is your ultimate companion for the Durga Puja festival. It helps users discover pandals, plan efficient routes to avoid traffic, and create personalized itineraries. Features include interactive maps, real-time crowd updates (planned), and a curated list of must-visit pandals based on user ratings and location.",
         tags: ["JavaScript", "Leaflet.js", "Maps", "Netlify"],
         status: "All Systems Operational",
+        timeline: "1 Month",
+        role: "Frontend",
+        team: "Solo",
         image: pujaParikramaImg,
         links: {
             demo: "https://pujaparikrama.online",
@@ -46,6 +52,9 @@ export const projects = [
             "Framer Motion"
         ],
         status: "In Progress",
+        timeline: "2 Months",
+        role: "Full Stack",
+        team: "Solo",
         image: codemateImg,
         links: {
             demo: "https://code-mate-gamma.vercel.app/",
@@ -59,6 +68,9 @@ export const projects = [
         fullDescription: "Bharat-Darshan is an immersive travel platform dedicated to promoting tourism in India. It showcases the rich cultural heritage, historical monuments, and breathtaking natural, landscapes of the country. Users can explore virtual tours, read detailed guides, and plan their trips with integrated booking options. The platform aims to provide a seamless and enriching travel planning experience.",
         tags: ["React", "HTML/CSS", "JavaScript"],
         status: "In Progress",
+        timeline: "Ongoing",
+        role: "Frontend",
+        team: "Team of 2",
         image: null, 
         links: {
             demo: "#", 

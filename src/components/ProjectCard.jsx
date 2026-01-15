@@ -170,20 +170,22 @@ const ProjectCard = ({ project, className }) => {
                         display: 'flex',
                         alignItems: 'center',
                         gap: '0.6rem',
-                        backgroundColor: 'rgba(255,255,255,0.03)',
-                        padding: '0.4rem 0.8rem',
-                        borderRadius: '6px',
-                        fontSize: '0.8rem',
-                        color: '#bbb'
+                        backgroundColor: '#111',
+                        border: '1px solid #222',
+                        padding: '0.3rem 0.8rem',
+                        borderRadius: '50px',
+                        fontSize: '0.75rem',
+                        fontWeight: '500',
+                        color: getStatusColor() === '#eab308' ? '#eab308' : '#ccc' // Highlight text color for In Progress if desired, OR keep white
                     }}>
                         <span style={{
-                            width: '8px',
-                            height: '8px',
+                            width: '6px',
+                            height: '6px',
                             borderRadius: '50%',
                             backgroundColor: getStatusColor(),
-                            boxShadow: `0 0 8px ${getStatusColor()}`
+                            boxShadow: `0 0 6px ${getStatusColor()}`
                         }}></span>
-                        {project.status || 'Planned'}
+                        <span style={{ color: '#eee' }}>{project.status || 'Planned'}</span>
                     </div>
 
                     {/* View Details Link */}

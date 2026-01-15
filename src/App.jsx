@@ -4,6 +4,7 @@ import Hero from './components/Hero';
 import About from './components/About';
 import Skills from './components/Skills';
 import Projects from './components/Projects';
+import FeaturedBlogs from './components/FeaturedBlogs';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Blog from './pages/Blog';
@@ -27,10 +28,11 @@ function App() {
               <About />
               <Skills />
               <Projects />
-              <Contact />
+              <FeaturedBlogs />
               <Quote />
             </main>
           } />
+          <Route path="/contact" element={<Contact />} />
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:slug" element={<BlogDetail />} />
 

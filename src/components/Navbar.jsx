@@ -143,7 +143,7 @@ const Navbar = () => {
                             )}
                         </a>
                     ))}
-                    <a href="#contact" className="btn btn-primary" style={{ padding: '0.5rem 1rem' }}>Hire Me</a>
+                    <div className="btn btn-primary" onClick={() => navigate('/contact')} style={{ padding: '0.5rem 1rem', cursor: 'pointer' }}>Hire Me</div>
                 </div>
 
                 {/* Mobile Menu Button */}

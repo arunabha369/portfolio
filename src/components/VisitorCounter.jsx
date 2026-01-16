@@ -54,18 +54,17 @@ const VisitorCounter = () => {
             display: 'inline-flex',
             alignItems: 'center',
             gap: '0.8rem',
-            backgroundColor: 'rgba(255, 255, 255, 0.05)',
-            border: '1px solid var(--border-color)',
-            padding: '0.5rem 1.2rem',
+            backgroundColor: '#111',
+            border: '1px solid #222',
+            padding: '0.6rem 1.4rem',
             borderRadius: '50px',
             fontSize: '0.9rem',
-            color: 'var(--text-secondary)',
-            backdropFilter: 'blur(10px)',
-            marginTop: '2rem'
+            color: '#888',
+            marginTop: '0' // Handled by parent container spacing
         }}>
-            <FaEye style={{ color: 'var(--text-primary)', fontSize: '1.1rem' }} />
+            <FaEye style={{ color: '#666', fontSize: '1.1rem' }} />
             <span>
-                You are the <strong style={{ color: '#fff' }}>{count.toLocaleString()}<sup>{getOrdinalSuffix(count)}</sup></strong> visitor
+                You are the <strong style={{ color: '#fff', fontWeight: '600' }}>{count.toLocaleString()}<sup>{getOrdinalSuffix(count)}</sup></strong> visitor
             </span>
         </div>
     );

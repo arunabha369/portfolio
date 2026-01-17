@@ -49,9 +49,9 @@ const FeaturedBlogs = () => {
                     justifyContent: 'center',
                     gap: '2rem'
                 }}>
-                    {blogs.map((blog) => (
+                    {blogs.map((blog, idx) => (
                         <div key={blog.id} style={{ width: '100%', maxWidth: '400px' }}>
-                            <BlogCard blog={blog} />
+                            <BlogCard blog={blog} isPinned={idx === 0} />
                         </div>
                     ))}
                 </div>
